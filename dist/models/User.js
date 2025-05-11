@@ -43,7 +43,12 @@ const UserSchema = new mongoose_1.Schema({
     role: { type: String, enum: ['user', 'admin'], required: true },
     points: { type: Number, default: 0 },
     testsCompleted: { type: Number, default: 0 },
-    averageScore: { type: Number, default: 0 }
+    averageScore: { type: Number, default: 0 },
+    badges: {
+        brained: { type: Number, default: 0 }, // For challenge winners
+        warrior: { type: Number, default: 0 }, // For tiebreaker winners who completed faster
+        unbeatable: { type: Number, default: 0 } // For users with best score in a course
+    }
 });
 const User = mongoose_1.default.model('User', UserSchema);
 exports.default = User;
