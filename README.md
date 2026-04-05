@@ -100,3 +100,4 @@ For the smoothest deployment experience, check out the [Vercel Platform](https:/
 
 More detailed deployment steps can be found in the [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
 # skill-street
+# ai-based-learning
