@@ -4,11 +4,6 @@
 
 [build.environment]
   NODE_ENV = "production"
-  # NEXT_PUBLIC_GROQ_API_KEY=set_in_netlify
-
-  # JWT_SECRET=set_secure_random
-  # JWT_REFRESH_SECRET=set_secure_random
-  # MONGO_URI=set_in_netlify
-
-  # GROQ_API_KEY=set_in_netlify
+  # Configure these in Netlify environment variables:
+  # NEXT_PUBLIC_GROQ_API_KEY, JWT_SECRET, JWT_REFRESH_SECRET, MONGO_URI, GROQ_API_KEY, RENDER_EXTERNAL_URL
   RENDER_EXTERNAL_URL=https://idp-project-1.onrender.com

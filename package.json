@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
-    "build": "next build && pnpm run build-server",
-    "build-server": "tsc -p tsconfig.server.json",
+    "dev": "node init && nodemon",
+    "build": "node init && next build && pnpm run build-server",
+    "build-server": "node init && tsc -p tsconfig.server.json",
     "postinstall": "pnpm run build-server",
     "netlify-build": "next build",
-    "start": "NODE_ENV=production node dist/server.js",
-    "start-server": "NODE_ENV=production node dist/server.js",
+    "start": "node init && NODE_ENV=production node dist/server.js",
+    "start-server": "node init && NODE_ENV=production node dist/server.js",
     "lint": "next lint"
   },
   "dependencies": {
