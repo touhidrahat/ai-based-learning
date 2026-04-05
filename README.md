@@ -1,16 +1,16 @@
 # SkillStreet - Interactive Learning Platform
 
-## Deployment Instructions for Render
+## Deploying to Render
 
-### Prerequisites
+### What You'll Need
 
-- A Render account (https://render.com)
-- MongoDB Atlas account for your database
-- Your project code pushed to a GitHub repository
+- An active Render account at https://render.com
+- A MongoDB Atlas database ready to use
+- Your codebase pushed to a GitHub repository
 
-### Environment Variables
+### Required Environment Variables
 
-Set the following environment variables in Render:
+Configure these variables in your Render dashboard:
 
 ```
 MONGODB_URI=mongodb+srv://username:password@cluster0.example.mongodb.net/database
@@ -21,53 +21,53 @@ REFRESH_TOKEN_EXPIRY=7d
 NODE_ENV=production
 ```
 
-### Deploy to Render
+### Deployment Steps
 
-#### Option 1: Using render.yaml (Recommended)
+#### Method 1: Blueprint Deployment (Recommended)
 
-1. Make sure your repository contains the `render.yaml` file
-2. Log in to your Render account
-3. Go to the Dashboard and click "New" > "Blueprint"
-4. Connect your GitHub account and select your repository
-5. Render will detect the `render.yaml` file and configure your services
-6. Click "Apply" to deploy the services
-7. Add the required environment variables in the Render dashboard
+1. Ensure the `render.yaml` file exists in your repository
+2. Sign in to Render
+3. Navigate to Dashboard and select "New" > "Blueprint"
+4. Link your GitHub and choose the repo
+5. Render automatically picks up the `render.yaml` configuration
+6. Hit "Apply" to kick off the deployment
+7. Fill in the environment variables through the Render dashboard
 
-#### Option 2: Manual Setup
+#### Method 2: Manual Configuration
 
-1. Log in to your Render account
-2. Go to Dashboard and click "New" > "Web Service"
-3. Connect your GitHub account and select your repository
-4. Configure the service:
-   - Name: `skillstreet` (or your preferred name)
-   - Runtime: `Node`
+1. Sign in to Render
+2. Head to Dashboard and select "New" > "Web Service"
+3. Link your GitHub and pick your repository
+4. Set up the service details:
+   - Name: `skillstreet` (or whatever you prefer)
+   - Environment: `Node`
    - Build Command: `pnpm install && pnpm run build`
    - Start Command: `pnpm start`
-5. Add environment variables
-6. Click "Create Web Service"
+5. Input all necessary environment variables
+6. Hit "Create Web Service" to launch
 
-### Post-Deployment
+### After Deployment
 
-After deployment:
+Once deployed:
 
-1. Wait for the build and deployment to complete
-2. Visit your deployed application at the provided Render URL
-3. Update `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_SOCKET_URL` to point to your new Render URL if needed
+1. Allow the build process to finish
+2. Access your live application via the Render URL
+3. Update `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_SOCKET_URL` with your new Render endpoint if necessary
 
-## Local Development
+## Running Locally
 
-1. Clone the repository
-2. Install dependencies: `pnpm install`
-3. Copy `.env.sample` to `.env` and fill in your environment variables
-4. Run the development server: `pnpm dev`
+1. Clone this repository
+2. Install all dependencies: `pnpm install`
+3. Duplicate `.env.sample` to `.env` and populate your values
+4. Start the development server: `pnpm dev`
 
-The application will be available at `http://localhost:3000`.
+Your local app will run on `http://localhost:3000`.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This project was bootstrapped using [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and built on [Next.js](https://nextjs.org).
 
 ## Getting Started
 
-First, run the development server:
+Launch the development server with one of these commands:
 
 ```bash
 npm run dev
@@ -79,23 +79,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edits to `app/page.tsx` will automatically reflect in the browser without requiring a refresh.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project leverages [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) for automatic optimization and loading of [Geist](https://vercel.com/font).
 
-## Learn More
+## Additional Resources
 
-To learn more about Next.js, take a look at the following resources:
+Expand your Next.js knowledge with these resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - comprehensive guide to features and APIs
+- [Learn Next.js](https://nextjs.org/learn) - hands-on tutorial experience
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit [the Next.js GitHub repository](https://github.com/vercel/next.js) to explore the source code and contribute feedback.
 
-## Deploy on Vercel
+## Vercel Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For the smoothest deployment experience, check out the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), built by the Next.js team.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+More detailed deployment steps can be found in the [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
+# skill-street
